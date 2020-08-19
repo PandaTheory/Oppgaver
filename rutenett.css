@@ -1,0 +1,38 @@
+#white:hover {
+    background-color: rgb(0, 255, 13);
+}
+
+#blue:hover {
+    background-color: rgb(147, 33, 240);
+}
+
+
+.rutenett td {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    font-size: 70px;
+    border: 2px solid black;
+    text-align: center;
+    font-weight: bold;
+}
+
+#blue {
+    background-color: rgb(52, 164, 255);
+}
+
+table, td {
+    border: 10px inset grey;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#white {
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    font-weight:;
+}

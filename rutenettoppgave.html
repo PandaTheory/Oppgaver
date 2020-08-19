@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="rutenett.css">
+</head>
+<body>
+    <h1>3x3 GRID</h1>
+    <table class="rutenett">
+        <tr>
+          <td id="blue" onmouseover="skråv(this)" onmouseout="skråvut(this)"></td>
+          <td id="up" onmouseover="opp(this)" onmouseout="opput(this)" onclick="klikkopp(this)"></td>
+          <td id="blue" onmouseover="skråh(this)" onmouseout="skråhut(this)"></td>
+        </tr>
+        <tr>
+          <td id="left" onmouseover="venstre(this)" onmouseout="venstreut(this)" onclick="klikkleft(this)"></td>
+          <td id="blue" onmouseover="midt(this)" onmouseout="midtut(this)" onclick="reset();"></td>
+          <td id="right" onmouseover="høyre(this)" onmouseout="høreut(this)" onclick="klikkright(this)"></td>
+        </tr>
+        <tr>
+          <td id="blue" onmouseover="skrånedv(this)" onmouseout="skrånedvut(this)"></td>
+          <td id="down" onmouseover="ned(this)" onmouseout="nedut(this)" onclick="klikkned(this)"></td>
+          <td id="blue" onmouseover="skrånedh(this)" onmouseout="skrånedhut(this)"></td>
+        </tr>
+      </table>
+
+    <script>
+    
+        function skråv(inn) {
+            inn.innerHTML = '&#8598';
+        }
+        function skråvut(out) {
+            out.innerHTML = '';
+        }
+        function opp(inn) {
+            inn.innerHTML = '&#8593';
+        }
+        function opput(out) {
+            out.innerHTML = '';
+        }
+        function skråh(inn) {
+            inn.innerHTML = '&#8599';
+        }
+        function skråhut(out) {
+            out.innerHTML = '';
+        }
+
+        function venstre(inn) {
+            inn.innerHTML = '&#8592';
+        }
+        function venstreut(out) {
+            out.innerHTML = '';
+        }
+        function midt(inn) {
+            inn.innerHTML = '&#10005';
+        }
+        function midtut(out) {
+            out.innerHTML = '';
+        }
+        function høyre(inn) {
+            inn.innerHTML = '&#8594';
+        }
+        function høreut(out) {
+            out.innerHTML = '';
+        }
+
+        function skrånedv(inn) {
+            inn.innerHTML = '&#8601';
+        }
+        function skrånedvut(out) {
+            out.innerHTML = '';
+        }
+        function ned(inn) {
+            inn.innerHTML = '&#8595';
+        }
+        function nedut(out) {
+            out.innerHTML = '';
+        }
+        function skrånedh(inn) {
+            inn.innerHTML = '&#8600';
+        }
+        function skrånedhut(out) {
+            out.innerHTML = '';
+        }
+        function klikkright() {
+            document.getElementById("right").style.paddingRight = "100px";
+        }
+        function klikkleft() {
+            document.getElementById("left").style.paddingLeft = "100px";
+        }
+        function klikkopp() {
+            document.getElementById("up").style.paddingTop = "100px";
+        }
+        function klikkned() {
+            document.getElementById("down").style.paddingBottom = "100px";
+        }
+
+        function reset() {
+            document.getElementById("down").style.padding = "0px";
+            document.getElementById("right").style.padding = "0px";
+            document.getElementById("left").style.padding = "0px";
+            document.getElementById("up").style.padding = "0px";
+        }
+    </script>
+</body>
+</html>
