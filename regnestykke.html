@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #breddeslider {
+            width: 400px;
+        }
+        #høydeslider {
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+   
+    <h1>REGNESTYKKE</h1>
+
+    <input id="breddeslider" type="range" min="1" max="1000" step="1" oninput="calculate()" value="2" />
+    <br>
+    <input id="høydeslider" type="range" min="1" max="1000" step="1" oninput="calculate()" value="2" />
+    <div id="resultat"></div>
+
+    <script>
+        var resulatatDiv = document.getElementById('resultat');
+        var breddeInput = document.getElementById('breddeslider');
+        var høydeInput = document.getElementById('høydeslider');
+        var areal = breddeInput*høydeInput;
+        
+
+        calculate();
+
+        function calculate(){
+            var breddeslider = parseInt(breddeInput.value);
+            var høydeslider = parseInt(høydeInput.value);
+            var omkrets = (2*breddeslider+2*høydeslider);
+            var sum = breddeslider + høydeslider;
+            var produkt = breddeslider * høydeslider;
+            resulatatDiv.innerHTML = '' +
+            høydeslider + '+' + breddeslider + '=' + sum + '<br/>'
+            + høydeslider + '*' + breddeslider + '=' + produkt + '' + '<br>'
+            + '2x(' + høydeslider + '+' + breddeslider + ') = ' + omkrets   
+        }
+
+
+    </script>
+
+</body>
+</html>
