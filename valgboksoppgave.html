@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #borderslider {
+            width: 300px;
+        }
+        #sizeslider {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>VALGBOKS</h1>
+    <h4>Størrelse</h2>
+    <input id="sizeslider" type="range" min="100" max="700" step="10" oninput="showDiv()" />
+    <br>
+    <h4>Avrunding</h4>
+    <input id="borderslider" type="range" min="0" max="60" step="1" oninput="showDiv()">
+    <br /><input id="textinput" type="text" oninput="showDiv()" value="" />
+   
+    <select id="boks" onchange="showDiv()">
+        <option value="red">Red Color</option>
+        <option value="green">Green Color</option>
+        <option value="blue">Blue Color</option> 
+    </select>
+
+    <select id="border" onchange="showDiv()">
+        <option value="black">Black Border</option>
+        <option value="grey">Grey Border</option>
+        <option value="None">None</option> 
+    </select>
+
+    <div id="resultat"></div>
+    <div id="resultatHtml" style="font-family: monospace"></div>
+    <script>
+        var resultatDiv = document.getElementById('resultat');
+        var resultatHtmlDiv = document.getElementById('resultatHtml');
+        var sizeslider = document.getElementById('sizeslider');
+        var textinput = document.getElementById('textinput');
+        var boks = document.getElementById('boks');
+        var border = document.getElementById('border')
+        var borderradius = document.getElementById('borderslider')
+
+        showDiv();
+
+        function showDiv() {
+            resultatDiv.innerHTML = '<div style="'
+                + 'background-color: ' + boks.value + ';'
+                + 'width: ' + sizeslider.value + 'px;'
+                + 'height: ' + sizeslider.value + 'px;'
+                + 'border-radius: ' + borderradius.value + '%;' 
+                + 'border : 5px solid ' +  border.value + ';' 
+                + '">' 
+                + textinput.value + '</div>';
+                resultatHtmlDiv.innerText = resultatDiv.innerHTML;
+        }
+    </script>
+</body>
+</html>
