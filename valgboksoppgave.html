@@ -11,6 +11,12 @@
         #sizeslider {
             width: 300px;
         }
+        #movedown {
+            width: 300px;
+        }
+        #moveright {
+            width: 300px;
+        }
     </style>
 </head>
 <body>
@@ -20,18 +26,23 @@
     <input id="sizeslider" type="range" min="100" max="700" step="10" oninput="showDiv()" />
     <br>
     <h4>Avrunding</h4>
-    <input id="borderslider" type="range" min="0" max="60" step="1" oninput="showDiv()">
+    <input id="borderslider" type="range" min="0" max="45" step="1" oninput="showDiv()">
     <br /><input id="textinput" type="text" oninput="showDiv()" value="" />
    
     <select id="boks" onchange="showDiv()">
         <option value="red">Red Color</option>
         <option value="green">Green Color</option>
         <option value="blue">Blue Color</option> 
+        <option value="yellow">Yellow Color</option> 
+        <option value="pink">Pink Color</option> 
+        <option value="purple">Purple Color</option> 
+        <option value="brown">Brown Color</option> 
     </select>
 
     <select id="border" onchange="showDiv()">
         <option value="black">Black Border</option>
         <option value="grey">Grey Border</option>
+        <option value="Red">Red Border</option>
         <option value="None">None</option> 
     </select>
 
