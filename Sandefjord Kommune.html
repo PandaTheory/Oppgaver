@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- saved from url=(0165)file:///C:/Users/jtork/AppData/Local/Packages/microsoft.windowscommunicationsapps_8wekyb3d8bbwe/LocalState/Files/S0/3/Attachments/Test%20Joakim%20Torkveen[1136].html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Sandefjord Kommune</title>
+    <style>
+     div {
+        color: blue; 
+        background-color: yellow;
+        padding: 10px;
+        margin: 10px;
+        border: solid red 2px;
+        width: 30px;
+        height: 30px;
+        float: left;
+     }
+
+     div.førstpålinja {
+        clear: left;
+	 }
+    </style>
+</head>
+<body>
+    <div id="r1k1" onclick="trykk(this, &#39;r2k1&#39;, &#39;r1k2&#39;)">7</div>
+    <div id="r1k2" onclick="trykk(this, &#39;r1k1&#39;, &#39;r1k3&#39;, &#39;r2k2&#39;, )">1</div>
+    <div id="r1k3" onclick="trykk(this, &#39;r2k3&#39;, &#39;r1k2&#39; )">2</div>
+
+    <div id="r2k1" class="førstpålinja" onclick="trykk(this, &#39;r2k2&#39;,&#39;r1k1&#39;,&#39;r3k1&#39;)">5</div>
+    <div id="r2k2" onclick="trykk(this, &#39;r1k2&#39;, &#39;r2k1&#39;, &#39;r2k3&#39;, &#39;r3k2&#39;)"></div>
+    <div id="r2k3" onclick="trykk(this, &#39;r2k2&#39;, &#39;r1k3&#39;, &#39;r3k3&#39;)">3</div>
+
+    <div id="r3k1" class="førstpålinja" onclick="trykk(this, &#39;r2k1&#39;, &#39;r3k2&#39;)">8</div>
+    <div id="r3k2" onclick="trykk(this, &#39;r2k2&#39;, &#39;r3k1&#39;, &#39;r3k3&#39;)">4</div>
+    <div id="r3k3" onclick="trykk(this, &#39;r3k2&#39;, &#39;r2k3&#39;)">6</div>
+    <div onclick="alert(&#39;bøøøø&#39;);" <="" div=""> 
+    
+    
+    
+
+    <script>
+        var blankrute = document.getElementById('blankfrastart');
+        
+        function trykk(tagElement, alt1, alt2, alt3, alt4) {
+            if(document.getElementById(alt1).innerHTML == '' ) {
+               document.getElementById(alt1).innerHTML = tagElement.innerHTML;
+               tagElement.innerHTML = '';
+			}
+            if(document.getElementById(alt2).innerHTML == '' ) {
+               document.getElementById(alt2).innerHTML = tagElement.innerHTML;
+               tagElement.innerHTML = '';
+			}
+            if(document.getElementById(alt3).innerHTML == '' ) {
+               document.getElementById(alt3).innerHTML = tagElement.innerHTML;
+               tagElement.innerHTML = '';
+			}
+            if(document.getElementById(alt4).innerHTML == '' ) {
+               document.getElementById(alt4).innerHTML = tagElement.innerHTML;
+               tagElement.innerHTML = '';
+			}
+        }
+
+    </script>
+
+
+</div></body></html>
