@@ -7,30 +7,29 @@
 
 <body>
 
-<div id="resultat"></div>
 <div id="randomDiv"></div>
+<div id="randomDiv2"></div>
 
 <script>
     
-   
-    var resultatDiv = document.getElementById('resultat');
     var randomDiv = document.getElementById('randomDiv');
+    var randomDiv2 = document.getElementById('randomDiv2');
     calculate();
     function calculate(){
         var tallA = parseInt(100+Math.floor(Math.random()*10));
         var tallB = parseInt(100+Math.floor(Math.random()*10));
-        var divHeight = parseInt(100+Math.floor(Math.random()*1000));
-        var divWidth = parseInt(100+Math.floor(Math.random()*1000));
+        var divHeight = parseInt(100+Math.floor(Math.random()*500));
+        var divWidth = parseInt(100+Math.floor(Math.random()*500));
 
-        var resultatRandom= '<div style="'
-        background-color + green;
+        resultatRandom= '<div style="background-color:green; width: ' + divWidth + 'px; height: ' + divHeight + 'px;"> height:' + divHeight + '<br/>width:' + divWidth + '</div>'
+        resultatRandom2= '<div style="background-color:blue; width: ' + divWidth + 'px; height: ' + divHeight + 'px;"> height:' + divHeight + '<br/>width:' + divWidth + '</div>'
+        
         
         randomDiv.innerHTML=resultatRandom;
+        randomDiv2.innerHTML=resultatRandom2;
     }
 
 </script>
 </body>
 
 </html>
-
-<!-- var resultatRandom= '<div style="background-color:green; width: '+divWidth+ 'px; height: '+divHeight+'px;"> height:'+divHeight+'<br/>width:'+divWidth+ '</div>'-->
